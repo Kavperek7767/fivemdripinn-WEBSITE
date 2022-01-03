@@ -1,0 +1,208 @@
+/* =============================================================================
+   HTML5 CSS Reset Minified - Eric Meyer
+   ========================================================================== */
+
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}
+body{line-height:1}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+nav ul{list-style:none}
+blockquote,q{quotes:none}
+blockquote:before,blockquote:after,q:before,q:after{content:none}
+a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent;text-decoration:none}
+mark{background-color:#ff9;color:#000;font-style:italic;font-weight:bold}
+del{text-decoration:line-through}
+abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}
+table{border-collapse:collapse;border-spacing:0}
+hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}
+input,select{vertical-align:middle}
+li{list-style:none}
+
+
+/* =============================================================================
+   My CSS
+   ========================================================================== */
+
+/* ---- base ---- */
+
+html,body{ 
+	width:100%;
+	height:100%;
+	background:#111;
+}
+
+html{
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body{
+  font:normal 75% Arial, Helvetica, sans-serif;
+}
+
+canvas{
+  display:block;
+  vertical-align:bottom;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+}
+
+
+
+.buttoncard{
+  margin-right: 200px;
+  width: 300px;
+  height: 300px;
+  border-radius: 800px;
+  /* box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22); */
+  cursor: pointer;
+  transition: 0.4s;
+  text-align: center;
+  justify-content: center;
+  
+}
+
+
+.buttoncard .buttoncard-image {
+
+  width: inherit;
+  height: inherit;
+  border-radius: 800px;
+  
+}
+
+.buttoncard .buttoncard-image img {
+
+  width: inherit;
+  height: inherit;
+  border-radius: 800px;
+  object-fit: cover;
+
+}
+
+.title {
+  top: 20%;
+  position: absolute;
+  font-size: 50px;
+  font-family: 'Russo One', sans-serif;
+}
+
+
+
+.buttoncard:hover {
+  /* transform: scale(0.5, 0.5); */
+  animation: heartBeat; 
+  animation-duration: 2s;
+}
+
+
+
+/* RGB */
+
+.glow-on-hover {
+    width: 300px;
+    height: 300px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: absolute;
+    top: 35%;
+    z-index: 0;
+    border-radius: 800px;
+    object-fit: cover;
+    
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 800px;
+}
+
+.glow-on-hover:active {
+    color: #000
+    
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 800px;
+    object-fit: cover;
+}
+
+
+#particles-js{
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  background-image: url('');
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+.pergamin-container {
+  width: 410px;
+  height: 512px;
+}
+.pergamin-header {
+  text-align: center;
+  position: relative;
+  bottom: 450px;
+}
+.pergamin-description {
+  text-align: center;
+  font-size: x-large;
+  position: relative;
+  bottom: 420px;
+}
+.pergamin-image {
+  max-width: 228px;
+  max-height: 100px;
+  /* position: relative; */
+  bottom: 420px;
+  left: 128px;
+  transition: 0.7s;
+}
+.pergamin-image:hover {
+  max-width: 256px;
+  max-height: 200px;
+  bottom: 500px;
+  left: 64px;
+}
